@@ -1,0 +1,1 @@
+npm install --save-dev typescript gulp gulp-typescript browserify tsify vinyl-source-stream gulp-uglify gulp-htmlmin vinyl-buffer del

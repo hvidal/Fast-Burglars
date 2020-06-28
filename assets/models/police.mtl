@@ -1,0 +1,65 @@
+# Blender MTL File: 'police.blend'
+# Material Count: 3
+
+newmtl Glass
+Ns 500
+Ka 0.9 0.9 0.9
+Kd 0.4 0.5 0.6
+Ks 0.4 0.4 0.4
+Ni 1.0
+d 0.95
+illum 2
+
+newmtl Black
+Ns 140
+Ka 0.1 0.1 0.1
+Kd 0.1 0.1 0.1
+Ks 0.25 0.25 0.25
+Ni 1.0
+d 1.0
+illum 2
+
+newmtl White
+Ns 140
+Ka 0.5 0.5 0.5
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ni 1.0
+d 1.0
+illum 2
+
+newmtl BackLight
+Ns 50
+Ka 0.3 0.3 0.3
+Kd 0.54 0.0 0.0
+Ks 0.2 0.2 0.2
+Ni 1.0
+d 1.0
+illum 2
+
+newmtl FrontLight
+Ns 50
+Ka 0.5 0.5 0.5
+Kd 1.0 1.0 1.0
+Ks 0.2 0.2 0.2
+Ni 1.0
+d 1.0
+illum 2
+
+newmtl TurnLight
+Ns 50
+Ka 0.3 0.3 0.3
+Kd 0.8 0.33 0.02
+Ks 0.2 0.2 0.2
+Ni 1.0
+d 1.0
+illum 2
+
+newmtl BlueLight
+Ns 50
+Ka 0.3 0.3 0.3
+Kd 0.0 0.0 1.0
+Ks 0.2 0.2 0.2
+Ni 1.0
+d 1.0
+illum 2

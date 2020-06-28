@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"removeComments": true
+	},
+	"include": [
+		"./*"
+	]
+}

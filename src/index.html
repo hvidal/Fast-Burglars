@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fast Burglars | Free Game by Hugo Teixeira</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="3D game developed with Typescript, Gulp, Three.js and Ammo.js">
+		<style>
+			body{color: #000;font-family:Monospace;text-align:center;background-color:#000;margin:0px;overflow:hidden;font-size:150%}
+			.blocker{position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.65);padding-top:10em;color:#FFF;text-shadow:1px 1px 20px #000;z-index:2}
+			#title,#progressbar{height:13em}
+			#game-title{font-size:300%;margin-bottom:.1em;color:#acc15e;letter-spacing:.1em;font-weight:bold;text-shadow:0px -1px 20px #222}
+			#progressbar > div{margin:1rem auto;width:400px;height:20px;background:#000;border:2px solid #000;border-radius:1em}
+			#progressbar > div > div{width:0;height:20px;background:#fffa6a;border:none;border-radius:1em}
+			[hidden]{display:none}
+			div.info{color:#BBB;font-size:80%}
+			a{color:#b7bd6f;cursor:pointer}
+			#hurd{opacity:.85;color:#FFFFFF;font-size:2em}
+			#hurd-top{position:fixed;margin:0 auto;width:100%;top:0}
+			#hurd-bottom{position:fixed;bottom:1em;text-align:center;width:100%}
+			#hurd img{width:4rem;vertical-align:-40%}
+			#restart{background:#FFF;font-size:.75em;padding:.3em 1em;border-radius:.3em;outline:none;border:2px solid #EEE;cursor:pointer}
+			#restart:hover{background:#CCC}
+			#restart:focus{outline:none}
+			#timer{font-size:200%}
+			#gameover{color:#ecff10}
+		</style>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-1184701-9', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="hurd" hidden>
+			<div id="hurd-top">
+				<div id="timer"></div>
+				<div id="gameover" hidden>Yay! You did it!</div>
+			</div>
+			<div id="hurd-bottom">
+				<img src="assets/img/burglar.png">
+				<span id="burglar-count"></span> / <span id="burglar-total"></span>
+				<button id="restart">Restart</button>
+			</div>
+		</div>
+		<div id="blocker" class="blocker">
+			<div id="progressbar">
+				Loading...
+				<div><div id="progress"></div></div>
+			</div>
+			<div id="title" hidden>
+				<div id="game-title">Fast Burglars</div>
+				<span style="font-size:200%">Click to play</span>
+				<br/><br/>
+				&larr; &uarr; &rarr; &darr; = Drive car<br/>
+				SPACE = flip the car<br/>
+				ESC = pause
+			</div>
+			<div class="info">
+				Developed by <a href="https://componenthouse.com/" target="_new">Hugo Teixeira</a>
+				 | <a href="https://twitter.com/HugoVTeixeira" target="_new">Follow Me</a>
+				<br/><br/>
+				<a href="https://github.com/hvidal/Fast-Burglars" target="_new">View Source Code</a>
+				<br/><br/>
+				Developed with
+					<a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>,
+					<a href="http://gulpjs.com/" target="_blank">Gulp</a>,
+					<a href="https://threejs.org/" target="_blank">ThreeJS</a> and
+					<a href="https://github.com/kripken/ammo.js" target="_blank">Ammo.js</a>
+				<br/>
+				3D models created with <a href="https://www.blender.org/">Blender</a> and <a href="http://www.adobe.com/br/products/photoshop.html">Adobe Photoshop</a>
+			</div>
+		</div>
+		<div id="container">Loading...</div>
+		<script src="assets/js/three.min.js"></script>
+		<script src="assets/js/ammo.js"></script>
+		<script src="assets/js/mtl_loader.min.js"></script>
+		<script src="assets/js/obj_loader.min.js"></script>
+		<script src="assets/js/detector.min.js"></script>
+		<script src="assets/js/stats.min.js"></script>
+		<script src='assets/js/threex.rendererstats.js'></script>
+		<script src="bundle.js"></script>
+	</body>
+</html>
